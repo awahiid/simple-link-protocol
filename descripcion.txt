@@ -1,0 +1,22 @@
+Descripción general del protocolo:
+
+    Este proyecto implementa un protocolo de enlace para controlar el envío,
+    la recepción y la verificación de tramas entre dos extremos.
+
+    Objetivos principales:
+    - Establecer una comunicación orientada a conexión.
+    - Gestionar tramas de control y de datos.
+    - Detectar errores mediante comprobación de bloque de control.
+    - Cerrar la comunicación de forma ordenada.
+
+    Estructura general:
+    1. Fase de conexión.
+    2. Fase de transmisión de datos con numeración de secuencia.
+    3. Fase de cierre de la comunicación.
+
+    En las tramas de control se transportan las primitivas de establecimiento,
+    confirmación y cierre. En las tramas de datos se añade longitud, secuencia
+    y un bloque de verificación para validar el contenido recibido.
+
+
+
