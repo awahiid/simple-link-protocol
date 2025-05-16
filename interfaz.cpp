@@ -5,11 +5,12 @@ int errorAbrirAdaptador(){
     return 1;
 }
 
-void abrirAdaptador(interface_t *iface){
+int abrirAdaptador(interface_t *iface){
     if (OpenAdapter(iface)){
-        errorAbrirAdaptador();
+        return errorAbrirAdaptador();
     }else{
         printf("Puerto abierto correctamente\n");
+        return 0;
     }
 }
 

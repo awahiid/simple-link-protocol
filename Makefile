@@ -5,9 +5,12 @@ SRC := $(wildcard *.cpp)
 CXXFLAGS ?= -std=c++17 -Wall -Wextra -O2 -I.
 LDLIBS := linkLayer.a -lpcap -pthread
 
-.PHONY: all clean check-deps
+.PHONY: all clean check-deps run
 
 all: check-deps $(TARGET)
+
+run: all
+	./$(TARGET)
 
 check-deps:
 	@mkdir -p build

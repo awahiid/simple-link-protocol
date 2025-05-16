@@ -13,7 +13,12 @@ make
 ```
 
 ## Ejecución
-El binario generado queda en:
+La forma más simple de ejecutarlo es:
+```bash
+make run
+```
+
+Si prefieres lanzar el binario manualmente, queda en:
 ```bash
 build/simple-link-protocol
 ```
@@ -22,5 +27,11 @@ build/simple-link-protocol
 Si quieres comprobar la compilación con diagnóstico claro:
 ```bash
 ./scripts/test_compilacion.sh
+```
+
+## Prueba con dos terminales
+Para crear una pareja `veth` y abrir dos terminales con el programa:
+```bash
+./scripts/test_doble_terminal.sh
 ```
 

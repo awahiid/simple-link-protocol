@@ -13,7 +13,9 @@ int main(){
     mostrarYSeleccionarInterfaz(&iface);
 
     // Apertura del adaptador
-    abrirAdaptador(&iface);
+    if (abrirAdaptador(&iface) != 0){
+        return 1;
+    }
 
     // Metadatos iniciales
     Metadata metadata = {

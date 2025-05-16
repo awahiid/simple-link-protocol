@@ -20,7 +20,7 @@
 int errorAbrirAdaptador();
 
 // Función para abrir el adaptador de red
-void abrirAdaptador(interface_t * iface);
+int abrirAdaptador(interface_t * iface);
 
 // Función para mostrar las interfaces de red disponibles
 void mostrarAdaptadoresDisponibles(pcap_if_t * lista_interfaces, int * tam);
